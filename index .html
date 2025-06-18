@@ -9,15 +9,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js"></script> 
 </head>
 <body>
     <!-- Navigation Bar -->
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-logo">
-                <span>Minh Thư</span>
+                <span>CV</span>
             </div>
             <ul class="nav-menu">
+                <li><a href="/html" class="nav-link">Home</a></li>
                 <li><a href="#profile" class="nav-link">Thông tin</a></li>
                 <li><a href="#objective" class="nav-link">Mục tiêu</a></li>
                 <li><a href="#education" class="nav-link">Học vấn</a></li>
@@ -57,9 +59,26 @@
                     </a>
                 </div>
             </div>
-            
+
+            <!-- Album thumbnail (hiển thị trên CV) -->
+            <div class="album-thumbnail">
+            <h2>📁 Album Ảnh Cá Nhân</h2>
+            <div class="thumbnail-grid">
+                <img src="images/album/thumb1.jpg" class="thumb" data-full="images/album/fullsize1.jpg">
+                <img src="images/album/thumb3.jpg" class="thumb" data-full="images/album/fullsize3.jpg">
+                <img src="images/album/thumb4.jpg" class="thumb" data-full="images/album/fullsize4.jpg">
+                <img src="images/album/thumb5.jpg" class="thumb" data-full="images/album/fullsize5.jpg">
+                <img src="images/album/thumb6.jpg" class="thumb" data-full="images/album/fullsize6.jpg">
+                <img src="images/album/thumb7.jpg" class="thumb" data-full="images/album/fullsize7.jpg">
+                <img src="images/album/thumb8.jpg" class="thumb" data-full="images/album/fullsize8.jpg">
+                <img src="images/album/thumb9.jpg" class="thumb" data-full="images/album/fullsize9.jpg">
+            </div>
+            <button id="download-all" class="download-btn">
+                <i class="fas fa-download"></i> Tải toàn bộ ảnh
+                </button>
+
             <!-- Personal Information -->
-            <section class="sidebar-section">
+            <section id="profile" class="sidebar-section">
                 <h3 class="sidebar-title">
                     <i class="fas fa-user"></i>
                     Thông tin cá nhân
@@ -216,7 +235,9 @@
                     </div>
                     <p class="education-major">Chuyên ngành: Công Nghệ Thông Tin</p>
                     <div class="university-logo">
-                        <img src="images/UTH.jpg" alt="UTH Logo" class="university-img">
+                        <img src="images/UTH1.jpg" alt="UTH Logo" class="university-img">
+                        <img src="images/UTH2.jpg" alt="UTH Logo" class="university-img">
+                        <img src="images/UTH3.jpg" alt="UTH Logo" class="university-img">
                     </div>
                 </div>
             </section>

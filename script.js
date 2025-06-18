@@ -477,3 +477,33 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.classList.add('dark-theme');
     }
 });
+
+document.getElementById('download-all').addEventListener('click', () => {
+  // Danh sách ảnh cần tải
+  const imageUrls = [
+    'images/album/thumb1.jpg',
+    'images/album/thumb2.jpg',
+    'images/album/thumb3.jpg',
+    'images/album/thumb4.jpg',
+    'images/album/thumb5.jpg',
+    'images/album/thumb6.jpg',
+    'images/album/thumb7.jpg',
+    'images/album/thumb8.jpg',
+    'images/album/thumb9.jpg',
+    'images/album/thumb10.jpg',
+  ];
+
+  // Tạo liên kết tải về cho từng ảnh
+  imageUrls.forEach((url, index) => {
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = `ảnh-${index + 1}.jpg`; // Đặt tên file
+    link.style.display = 'none'; // Ẩn link
+    document.body.appendChild(link);
+    link.click(); // Kích hoạt tải về
+    document.body.removeChild(link);
+  });
+
+  // Thông báo
+  alert(`Đã bắt đầu tải ${imageUrls.length} ảnh. Mở thư mục tải về để xem!`);
+});
